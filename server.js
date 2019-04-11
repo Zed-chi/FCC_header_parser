@@ -33,9 +33,9 @@ app.get("/api/whoami", function (req, res) {
   var headers = req.headers;
   if (headers){
     var outJson = {
-      'user-agent': headers["user-agent"],
+      'browser-agent': headers["user-agent"],
       'accept-language': headers["accept-language"],
-      'ip': headers["x-forwarded-for"]
+      'your_ip': headers["x-forwarded-for"]
     };
   } else { 
     var outJson = {message: "Parse Error"};
